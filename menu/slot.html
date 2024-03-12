@@ -1,0 +1,1254 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Thu Jul 20 2023 05:35:29 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="64770b53ca6e0d51fa6610e4" data-wf-site="647576e9c152564955c533bf">
+<head>
+  <meta charset="utf-8">
+  <title>slot</title>
+  <meta content="slot" property="og:title">
+  <meta content="slot" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/gamble-master-674405.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+    <style>
+    .header{
+      z-index:2;
+    }
+    .m_btn::after,.h_logobox::after{
+      content: attr(data-name);
+      position: absolute;
+      top:100%;
+      color:#fff;
+      border:3px solid pink;
+      text-wrap: nowrap;
+      display: none;
+    }
+    .m_btn:hover::after,.h_logobox:hover::after{
+      display: block;
+    }
+    .userinfo::after,.logout::after{
+      content: attr(data-name);
+      position: absolute;
+      top:100%;
+      color:#000;
+      border:3px solid pink;
+      text-wrap: nowrap;
+      display: none;
+    }
+    .logout::after{
+      right:0;
+    }
+    .userinfo:hover::after,.logout:hover::after{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="h_logobox" data-name="메인 페이지로 이동합니다."><img src="../images/home_logo.png" loading="lazy" sizes="(max-width: 991px) 8vw, 140px"  alt="" class="h_logo" data-link="index.html"></div>
+    <div class="menuwrap">
+      <div class="m_btn" data-name="홀덤게임으로 이동합니다." data-link="holdem.html">
+        <div>홀덤</div>
+        <div class="line"></div>
+      </div>
+      <div class="m_btn" data-name="슬롯게임으로 이동합니다." data-link="slot.html">
+        <div>슬롯</div>
+        <div class="line"></div>
+      </div>
+      <div class="m_btn" data-name="거래소로 이동합니다." data-link="exchange.html">
+        <div>거래소</div>
+        <div class="line"></div>
+      </div>
+      <div class="m_btn" data-name="고객센터로 이동합니다." data-link="service.html">
+        <div>고객센터</div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="nav_wrap"><span class="login">로그인</span><span class="divide">|</span><span class="sign">회원가입</span></div>
+    <div class="nav_wrap2">
+      <div class="userinfo" data-name="내정보로 이동합니다." data-link="../mypage/myinfo.html"><span class="userid">홍길동</span><span class="divide">|</span><span class="usermoney">999,999,999</span> p</div>
+      <div class="logout" data-name="로그인페이지로 이동합니다." data-link="../login.html">로그아웃</div>
+    </div>
+  </div>
+  <div class="slotbox">
+    <div class="slot_content">
+      <div class="back">
+        <div class="frame_slot">
+          <div class="container-2"><img src="../images/game_titlemark.png" loading="lazy" alt="" class="slots_logo">
+            <div class="slot_menu_area"><img src="../images/slot_bt5_1slot_bt5.png" loading="lazy" alt="" class="slot_ui_btn">
+              <div class="slot_menu_box"><img src="../images/lg_icon1_1lg_icon1.png" loading="lazy" alt="" class="slot_ui_btn back">
+                <div class="slot_side_menu">
+                  <div class="slot_side_btn"><img src="../images/lg_icon2_1lg_icon2.png" loading="lazy" alt="" class="slot_side_img">
+                    <div>게임로비</div>
+                  </div>
+                  <div class="slot_side_btn"><img src="../images/lg_icon3_1lg_icon3.png" loading="lazy" alt="" class="slot_side_img">
+                    <div>토너먼트</div>
+                  </div>
+                  <div class="slot_side_btn"><img src="../images/lg_icon4_1lg_icon4.png" loading="lazy" alt="" class="slot_side_img">
+                    <div>드롭목록</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slots_block"><img src="../images/ui_line.png" loading="lazy" alt="" class="slot_line">
+              <div class="slot_area">
+                <div class="item_box"><img src="../images/piace01.png" loading="lazy" alt="" class="slot_img"><img src="../images/piaceboom.png" loading="lazy" alt="" class="slot_img bomb2"><img src="../images/piacefire.png" loading="lazy" alt="" class="slot_img bomb1"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piace06.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piace02.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piace02.png" loading="lazy" alt="" class="slot_img"></div>
+              </div><img src="../images/ui_line.png" loading="lazy" alt="" class="slot_line">
+              <div class="slot_area">
+                <div class="item_box"><img src="../images/piace10.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"><img src="../images/piacewin.png" loading="lazy" alt="" class="slot_img effect2"><img src="../images/piace14.png" loading="lazy" alt="" class="slot_img"></div>
+                <div class="item_box"><img src="../images/piace04.png" loading="lazy" height="20" alt="" class="slot_img j"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piace05.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+              </div><img src="../images/ui_line.png" loading="lazy" alt="" class="slot_line">
+              <div class="slot_area">
+                <div class="slot_b_box"><img src="../images/piacebg3.png" loading="lazy" alt="" class="slot_bn_back"><img src="../images/piace15.png" loading="lazy" alt="" class="slot_b_img2"></div>
+                <div class="item_box"><img src="../images/piacebg2.png" loading="lazy" alt="" class="slot_img_b1"><img src="../images/piacebg3.png" loading="lazy" alt="" class="slot_img_b2">
+                  <div class="item_txtbox">
+                    <div class="item_txt outline">\5,000.00</div>
+                    <div class="item_txt">\5,000.00</div>
+                  </div><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"><img src="../images/piace11.png" loading="lazy" alt="" class="slot_img2">
+                </div>
+                <div class="item_box"><img src="../images/piace02.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+              </div><img src="../images/ui_line.png" loading="lazy" alt="" class="slot_line">
+              <div class="slot_area">
+                <div class="item_box"><img src="../images/piace19.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piacebg2.png" loading="lazy" alt="" class="slot_img_b1"><img src="../images/piacebg3.png" loading="lazy" alt="" class="slot_img_b2">
+                  <div class="item_txtbox">
+                    <div class="item_txt outline">\5,000.00</div>
+                    <div class="item_txt">\5,000.00</div>
+                  </div><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"><img src="../images/piace13.png" loading="lazy" alt="" class="slot_img2 _2">
+                </div>
+                <div class="item_box"><img src="../images/piace02.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+              </div><img src="../images/ui_line.png" loading="lazy" alt="" class="slot_line">
+              <div class="slot_area">
+                <div class="item_box"><img src="../images/piace08.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+                <div class="item_box"><img src="../images/piacebg2.png" loading="lazy" alt="" class="slot_img_b1"><img src="../images/piacebg3.png" loading="lazy" alt="" class="slot_img_b2"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"><img src="../images/piace12.png" loading="lazy" alt="" class="slot_img2 _3">
+                  <div class="item_txtbox on">
+                    <div class="item_txt">\50,000.00</div>
+                    <div class="item_txt outline">\50,000.00</div>
+                  </div>
+                </div>
+                <div class="item_box"><img src="../images/piace02.png" loading="lazy" alt="" class="slot_img"><img src="../images/piacebubble.png" loading="lazy" alt="" class="slot_img effect"></div>
+              </div><img src="../images/ui_line.png" loading="lazy" alt="" class="slot_line">
+            </div>
+            <div class="slot_ui">
+              <div class="roll_op_pop"><img src="../images/bett_box1.png" loading="lazy" alt="" class="roll_op_back">
+                <div class="pop_box">
+                  <div class="exsit_btn"><img src="../images/rule_icon14_1rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+                  <div class="pop_title _2">10라인에배팅</div>
+                  <div class="roll_op_box">
+                    <div class="pop_sub_title">라인당 코인</div>
+                    <div class="roll_op_warp"><img src="../images/slot_bt2_1slot_bt2.png" loading="lazy" alt="" class="roll_op_btn">
+                      <div class="roll_op_txtbox"><img src="../images/bett_box2.png" loading="lazy" alt="" class="roll_op_txtback">
+                        <div class="roll_op_txt">1</div>
+                      </div><img src="../images/st_icon4_1st_icon4.png" loading="lazy" alt="" class="roll_op_btn">
+                    </div>
+                  </div>
+                  <div class="roll_op_box">
+                    <div class="pop_sub_title">화폐 가치</div>
+                    <div class="roll_op_warp"><img src="../images/slot_bt2_1slot_bt2.png" loading="lazy" alt="" class="roll_op_btn">
+                      <div class="roll_op_txtbox"><img src="../images/bett_box2.png" loading="lazy" alt="" class="roll_op_txtback">
+                        <div class="roll_op_txt">\ 20.00</div>
+                      </div><img src="../images/st_icon4_1st_icon4.png" loading="lazy" alt="" class="roll_op_btn">
+                    </div>
+                  </div>
+                  <div class="roll_op_box">
+                    <div class="pop_sub_title">배팅 총액</div>
+                    <div class="roll_op_warp"><img src="../images/slot_bt2_1slot_bt2.png" loading="lazy" alt="" class="roll_op_btn">
+                      <div class="roll_op_txtbox"><img src="../images/bett_box2.png" loading="lazy" alt="" class="roll_op_txtback">
+                        <div class="roll_op_txt">\ 20.00</div>
+                      </div><img src="../images/st_icon4_1st_icon4.png" loading="lazy" alt="" class="roll_op_btn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slot_ui_assetbox">
+                <div class="slot_ui_asset_warp">
+                  <div class="asset_title">크레딧카드</div>
+                  <div class="asset_count">￦7,000.091</div>
+                </div>
+                <div class="slot_ui_asset_warp _2">
+                  <div class="asset_title">배팅</div>
+                  <div class="asset_count">￦999,999,999</div>
+                </div>
+              </div><img src="../images/uibox_1.png" loading="lazy" sizes="(max-width: 479px) 23vw, (max-width: 991px) 90vw, 1280px" srcset="../images/uibox_1-p-500.png 500w, ../images/uibox_1-p-800.png 800w, ../images/uibox_1-p-1080.png 1080w, ../images/uibox_1-p-1600.png 1600w, ../images/uibox_1.png 1600w" alt="" class="slot_ui_img">
+              <div class="slot_auto_area"><img src="../images/st_icon3_1st_icon3.png" loading="lazy" alt="" class="slot_auto_img off"><img src="../images/st_icon2_1st_icon2.png" loading="lazy" alt="" class="slot_auto_img on"></div>
+              <div class="slot_ui_btn_area">
+                <div class="g_btnwarp"><img src="../images/slot_bt3_1slot_bt3.png" loading="lazy" alt="" class="slot_ui_btn2"></div>
+                <div class="g_btnwarp"><img src="../images/icon_sound_1icon_sound.png" loading="lazy" alt="" class="slot_ui_sound"></div>
+              </div>
+              <div class="slot_info"><img src="../images/slot_bt4_1slot_bt4.png" loading="lazy" alt="" class="slot_ui_btn"></div>
+              <div class="ui_txtbox">
+                <div class="ui_txt">★ 스페이스를 길게 눌러 터보 스핀 ★</div>
+                <div class="ui_winnings outline"><span class="yellow">당첨금</span>\500.00 </div>
+                <div class="ui_winnings"><span class="yellow">당첨금</span>\500.00 </div>
+              </div>
+              <div class="ui_win_area"><img src="../images/piace08.png" loading="lazy" alt="" class="ui_win_img"><img src="../images/piace08.png" loading="lazy" alt="" class="ui_win_img"><img src="../images/piace08.png" loading="lazy" alt="" class="ui_win_img">
+                <div class="ui_win_txt">라인 17 지불 ￦500.00</div>
+              </div>
+              <div class="slots_auto_btn"><img src="../images/auto_bt_1auto_bt.png" loading="lazy" alt="" class="slots_auto_img">
+                <div class="slot_auto_txt">오토 플레이</div>
+              </div>
+              <div class="slots_btn_betwarp _2"><img src="../images/slot_bt2_1slot_bt2.png" loading="lazy" alt="" class="slots_btn_bet _2"></div>
+              <div class="slots_btn_betwarp"><img src="../images/st_icon4_1st_icon4.png" loading="lazy" alt="" class="slots_btn_bet"></div>
+              <div class="slots_btnwarp"><img src="../images/slot_bt.png" loading="lazy" alt="" class="slots_btn"></div>
+            </div>
+            <div class="slot_event_box on">
+              <div class="slot_eventwarp"><img src="../images/gds_icon1_1gds_icon1.png" loading="lazy" alt="" class="slot_event_img">
+                <div class="text-block-4">4,000+</div>
+              </div>
+              <div class="text-block-5"><span class="yellow">★ 총 4000점<br>추가 보너스 이벤트!</span>남은시간 1일 22시 20분</div>
+            </div>
+            <div class="slot_top"><img src="../images/s_uibox_3.png" loading="lazy" sizes="(max-width: 479px) 14vw, (max-width: 991px) 55vw, 704px" srcset="../images/s_uibox_3-p-500.png 500w, ../images/s_uibox_3-p-800.png 800w, ../images/s_uibox_3.png 936w" alt="" class="slot_top_back">
+              <div class="slot_top_box">
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_14s_icon_3.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_16s_icon_4.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_9s_icon_5.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_10s_icon_6.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+                <div class="slot_top_warp"><img src="../images/s_icon_15s_icon_1.png" loading="lazy" alt="" class="slot_top_img"><img src="../images/s_icon_11s_icon_2.png" loading="lazy" alt="" class="slot_top_img _2"></div>
+              </div><img src="../images/s_icon_12s_icon_8.png" loading="lazy" alt="" class="slot_top_icon _2"><img src="../images/s_icon_13s_icon_7.png" loading="lazy" alt="" class="slot_top_icon">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe bomb"><img src="../images/cut_02.png" loading="lazy" sizes="100vw" srcset="../images/cut_02-p-500.png 500w, ../images/cut_02-p-800.png 800w, ../images/cut_02.png 985w" alt="" class="bomb_img_effect"><img src="../images/cut_02.png" loading="lazy" sizes="100vw" srcset="../images/cut_02-p-500.png 500w, ../images/cut_02-p-800.png 800w, ../images/cut_02.png 985w" alt="" class="bomb_img_effect _2"><img src="../images/cut_03.png" loading="lazy" sizes="100vw" srcset="../images/cut_03-p-500.png 500w, ../images/cut_03-p-800.png 800w, ../images/cut_03.png 985w" alt="" class="bomb_img_effect _3"><img src="../images/cut_04.png" loading="lazy" sizes="100vw" srcset="../images/cut_04-p-500.png 500w, ../images/cut_04-p-800.png 800w, ../images/cut_04.png 985w" alt="" class="bomb_img_effect _4"><img src="../images/cut_05.png" loading="lazy" sizes="100vw" srcset="../images/cut_05-p-500.png 500w, ../images/cut_05-p-800.png 800w, ../images/cut_05.png 985w" alt="" class="bomb_img_effect _5"><img src="../images/cut_06.png" loading="lazy" sizes="100vw" srcset="../images/cut_06-p-500.png 500w, ../images/cut_06-p-800.png 800w, ../images/cut_06.png 985w" alt="" class="bomb_img_effect _6"><img src="../images/cut_07.png" loading="lazy" sizes="100vw" srcset="../images/cut_07-p-500.png 500w, ../images/cut_07-p-800.png 800w, ../images/cut_07.png 985w" alt="" class="bomb_img_effect _7"><img src="../images/cut_08.png" loading="lazy" sizes="100vw" srcset="../images/cut_08-p-500.png 500w, ../images/cut_08-p-800.png 800w, ../images/cut_08.png 985w" alt="" class="bomb_img_effect _8"><img src="../images/s_boomgh.png" loading="lazy" sizes="100vw" srcset="../images/s_boomgh-p-500.png 500w, ../images/s_boomgh.png 716w" alt="" class="bomb_img"></div>
+    <div class="popframe win"><img src="../images/font_great_win.png" loading="lazy" sizes="100vw" srcset="../images/font_great_win-p-500.png 500w, ../images/font_great_win-p-800.png 800w, ../images/font_great_win-p-1080.png 1080w, ../images/font_great_win.png 1569w" alt="" class="win_img _2"><img src="../images/font_wonderful_win.png" loading="lazy" sizes="100vw" srcset="../images/font_wonderful_win-p-500.png 500w, ../images/font_wonderful_win-p-800.png 800w, ../images/font_wonderful_win-p-1080.png 1080w, ../images/font_wonderful_win-p-1600.png 1600w, ../images/font_wonderful_win.png 1628w" alt="" class="win_img _4"><img src="../images/font_awesome_win.png" loading="lazy" sizes="100vw" srcset="../images/font_awesome_win-p-500.png 500w, ../images/font_awesome_win-p-800.png 800w, ../images/font_awesome_win-p-1080.png 1080w, ../images/font_awesome_win.png 1567w" alt="" class="win_img _3"><img src="../images/font_good_win.png" loading="lazy" sizes="100vw" srcset="../images/font_good_win-p-500.png 500w, ../images/font_good_win-p-800.png 800w, ../images/font_good_win-p-1080.png 1080w, ../images/font_good_win.png 1580w" alt="" class="win_img">
+      <div class="win_txtbox">
+        <div class="win_txt outline">\5,500,000.000</div>
+        <div class="win_txt">\5,500,000.000</div>
+      </div>
+      <div class="win_txt2">계속하려면 화면을 클릭하세요.</div>
+    </div>
+    <div class="popframe general">
+      <div class="pop general"><img src="../images/bett_ppbox1.png" loading="lazy" alt="" class="pop2_back">
+        <div class="pop_box">
+          <div class="exsit_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e63c1cc259c7f364d9b_rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+          <div class="pop_title">메시지</div>
+          <div class="pop_container">
+            <div>이 금액으로 베팅하기엔 자금이 부족합니다.<br>계정 자금을 충전하거나, 베팅 수준을 낮추시기 바랍니다.</div>
+          </div>
+          <div class="pop_btn"><img src="../images/bett_ppbt1.png" loading="lazy" alt="" class="pop_btn_g">
+            <div class="btn_txt">확인</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe auto">
+      <div class="pop auto"><img src="../images/auto_box1.png" loading="lazy" sizes="100vw" srcset="../images/auto_box1-p-500.png 500w, ../images/auto_box1.png 684w" alt="" class="pop2_back">
+        <div class="pop_box">
+          <div class="exsit_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e63c1cc259c7f364d9b_rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+          <div class="pop_title">오토 플레이 설정</div>
+          <div class="pop_container">
+            <div class="form-block w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" method="get" data-wf-page-id="64770b53ca6e0d51fa6610e4" data-wf-element-id="5b4c2e16-0b85-1886-13ff-1ca5a5a802a7">
+                <div class="pop_sub_title">오토 플레이 옵션</div>
+                <div class="auto_warp">
+                  <div class="op_check_warp">
+                    <div class="op_btn"><img src="../images/auto_bt4_1auto_bt4.png" loading="lazy" alt="" class="op_btnimg"><img src="../images/auto_bt5_1auto_bt5.png" loading="lazy" alt="" class="op_btnimg x"></div>
+                    <div>터보스핀</div>
+                  </div>
+                  <div class="op_check_warp">
+                    <div class="op_btn"><img src="../images/auto_bt4_1auto_bt4.png" loading="lazy" alt="" class="op_btnimg"><img src="../images/auto_bt5_1auto_bt5.png" loading="lazy" alt="" class="op_btnimg x"></div>
+                    <div>빠른 스핀</div>
+                  </div>
+                  <div class="op_check_warp">
+                    <div class="op_btn"><img src="../images/auto_bt4_1auto_bt4.png" loading="lazy" alt="" class="op_btnimg ok"><img src="../images/auto_bt5_1auto_bt5.png" loading="lazy" alt="" class="op_btnimg"></div>
+                    <div>화면 스킵</div>
+                  </div>
+                </div>
+                <div class="pop_sub_title">오토 플레이 설정</div>
+                <div class="auto_warp">
+                  <div class="op_check_warp">
+                    <div class="op_check_box"><img src="../images/auto_bt2_1auto_bt2.png" loading="lazy" alt="" class="op_check_img">
+                      <div class="op_check_checked on"></div>
+                    </div>
+                    <div>터보스핀</div>
+                  </div>
+                  <div class="op_check_warp">
+                    <div class="op_check_box"><img src="../images/auto_bt2_1auto_bt2.png" loading="lazy" alt="" class="op_check_img">
+                      <div class="op_check_checked on"></div>
+                    </div>
+                    <div>빠른 스핀</div>
+                  </div>
+                  <div class="op_check_warp">
+                    <div class="op_check_box"><img src="../images/auto_bt2_1auto_bt2.png" loading="lazy" alt="" class="op_check_img">
+                      <div class="op_check_checked on"></div>
+                    </div>
+                    <div>화면 스킵</div>
+                  </div>
+                </div>
+                <div class="pop_sub_title">오토 스핀 횟수</div>
+                <div class="auto_warp">
+                  <div class="op_check_warp">
+                    <div class="op_check_box"><img src="../images/auto_bt2_1auto_bt2.png" loading="lazy" alt="" class="op_check_img">
+                      <div class="op_check_checked on"></div>
+                    </div>
+                    <div>10번</div>
+                  </div>
+                  <div class="op_check_warp">
+                    <div class="op_check_box"><img src="../images/auto_bt2_1auto_bt2.png" loading="lazy" alt="" class="op_check_img">
+                      <div class="op_check_checked on"></div>
+                    </div>
+                    <div>50번</div>
+                  </div>
+                  <div class="op_check_warp">
+                    <div class="op_check_box"><img src="../images/auto_bt2_1auto_bt2.png" loading="lazy" alt="" class="op_check_img">
+                      <div class="op_check_checked on"></div>
+                    </div>
+                    <div>100번</div>
+                  </div>
+                </div>
+                <div class="op_inputbox"><input type="text" class="input_g w-input" maxlength="256" name="field" data-name="Field" placeholder="스핀 횟수를 지정해 주세요. (EX: 30)" id="field" required=""></div>
+              </form>
+              <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pop_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63913a0fd0b40e5081f0f75f_bett_ppbt1.png" loading="lazy" alt="" class="pop_btn_g">
+            <div class="btn_txt">자동 재생 시작 <span class="count">(100)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe tournament1">
+      <div class="pop"><img src="../images/rule_box1.png" loading="lazy" sizes="100vw" srcset="../images/rule_box1-p-500.png 500w, ../images/rule_box1-p-800.png 800w, ../images/rule_box1-p-1080.png 1080w, ../images/rule_box1.png 1365w" alt="" class="pop1_back">
+        <div class="pop_box">
+          <div class="exsit_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e63c1cc259c7f364d9b_rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+          <div class="pop_top">
+            <div class="pop_top_btn _1 on">
+              <div>상품</div>
+            </div>
+            <div class="pop_top_btn _2">
+              <div>순위표</div>
+            </div>
+            <div class="pop_top_btn _3 on">
+              <div>규칙</div>
+            </div>
+          </div>
+          <div class="pop_block">
+            <div class="pop_t_box1">
+              <div class="t_count_frame">
+                <div class="t_count_block">
+                  <div class="t_count_iconbox"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904ecd5b854c7656599002_gds_icon1.png" loading="lazy" alt="" class="t_count_icon"></div>
+                  <div class="t_count_title">Sword of Ares : 슬롯 캐시 드롭 종료까지</div>
+                  <div class="t_count_box"><img src="../images/gds_icon2_1gds_icon2.png" loading="lazy" alt="" class="t_count_img">
+                    <div class="t_count_txtbox">
+                      <div>01일</div>
+                      <div>:</div>
+                      <div>01시</div>
+                      <div>:</div>
+                      <div>01분</div>
+                      <div>:</div>
+                      <div>01초</div>
+                    </div>
+                  </div>
+                </div><img src="../images/gds_box2.png" loading="lazy" alt="" class="t_count_back">
+              </div>
+              <div class="t_count_frame">
+                <div class="t_count_block">
+                  <div class="t_count_iconbox"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904ecd5b854c7656599002_gds_icon1.png" loading="lazy" alt="" class="t_count_icon"></div>
+                  <div class="t_count_title">Sword of Ares : 주간 토너먼트 종료까지</div>
+                  <div class="t_count_box"><img src="../images/gds_icon2_1gds_icon2.png" loading="lazy" alt="" class="t_count_img">
+                    <div class="t_count_txtbox">
+                      <div>011일</div>
+                      <div>:</div>
+                      <div>01시</div>
+                      <div>:</div>
+                      <div>01분</div>
+                      <div>:</div>
+                      <div>01초</div>
+                    </div>
+                  </div>
+                </div><img src="../images/gds_box2.png" loading="lazy" alt="" class="t_count_back">
+              </div>
+            </div>
+            <div class="pop_t_box2">
+              <div class="pop_txtbox">
+                <div>This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe tournament2">
+      <div class="pop"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e6371afe72a587eff1e_rule_box1.png" loading="lazy" alt="" class="pop1_back">
+        <div class="pop_box">
+          <div class="exsit_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e63c1cc259c7f364d9b_rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+          <div class="pop_top">
+            <div class="pop_top_btn">
+              <div>상품</div>
+            </div>
+            <div class="pop_top_btn _2 on">
+              <div>순위표</div>
+            </div>
+            <div class="pop_top_btn _3">
+              <div>규칙</div>
+            </div>
+          </div>
+          <div class="pop_block">
+            <div class="pop_t_box1">
+              <div class="t_count_frame">
+                <div class="t_count_block">
+                  <div class="t_count_iconbox"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904ecd5b854c7656599002_gds_icon1.png" loading="lazy" alt="" class="t_count_icon"></div>
+                  <div class="t_count_title">Sword of Ares : 슬롯 캐시 드롭 종료까지</div>
+                  <div class="t_count_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904ecdc1cc25e35d36562b_gds_icon2.png" loading="lazy" alt="" class="t_count_img">
+                    <div class="t_count_txtbox">
+                      <div>01일</div>
+                      <div>:</div>
+                      <div>01시</div>
+                      <div>:</div>
+                      <div>01분</div>
+                      <div>:</div>
+                      <div>01초</div>
+                    </div>
+                  </div>
+                </div><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63928e598774f6647b4bcb88_gds_box2.png" loading="lazy" alt="" class="t_count_back">
+              </div>
+              <div class="t_count_frame">
+                <div class="t_count_block">
+                  <div class="t_count_iconbox"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904ecd5b854c7656599002_gds_icon1.png" loading="lazy" alt="" class="t_count_icon"></div>
+                  <div class="t_count_title">Sword of Ares : 주간 토너먼트 종료까지</div>
+                  <div class="t_count_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904ecdc1cc25e35d36562b_gds_icon2.png" loading="lazy" alt="" class="t_count_img">
+                    <div class="t_count_txtbox">
+                      <div>011일</div>
+                      <div>:</div>
+                      <div>01시</div>
+                      <div>:</div>
+                      <div>01분</div>
+                      <div>:</div>
+                      <div>01초</div>
+                    </div>
+                  </div>
+                </div><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63928e598774f6647b4bcb88_gds_box2.png" loading="lazy" alt="" class="t_count_back">
+              </div>
+            </div>
+            <div class="pop_t_box2">
+              <div class="t_listwarp my">
+                <div class="my_score"> 내 점수 : 982,918</div>
+                <div>내랭크 : 4000 +</div>
+              </div>
+              <div class="t_list_top">
+                <div class="t_list _1">포지션</div>
+                <div class="t_list">
+                  <div>플레이어 ID</div>
+                </div>
+                <div class="t_list _2">상금</div>
+              </div>
+              <div class="t_list_area">
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">1</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">2</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list t2"><img src="../images/scb_icon0_1scb_icon0.png" loading="lazy" alt="" class="profile_icon">
+                    <div>플레이어 ID</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe tournament3">
+      <div class="pop"><img src="../images/rule_box1.png" loading="lazy" sizes="100vw" srcset="../images/rule_box1-p-500.png 500w, ../images/rule_box1-p-800.png 800w, ../images/rule_box1-p-1080.png 1080w, ../images/rule_box1.png 1365w" alt="" class="pop1_back">
+        <div class="pop_box">
+          <div class="exsit_btn"><img src="../images/rule_icon14_1rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+          <div class="pop_top">
+            <div class="pop_top_btn on">
+              <div>상품</div>
+            </div>
+            <div class="pop_top_btn _2">
+              <div>순위표</div>
+            </div>
+            <div class="pop_top_btn _3">
+              <div>규칙</div>
+            </div>
+          </div>
+          <div class="pop_block">
+            <div class="pop_t_box1">
+              <div class="t_count_frame">
+                <div class="t_count_block">
+                  <div class="t_count_iconbox"><img src="../images/gds_icon1_1gds_icon1.png" loading="lazy" alt="" class="t_count_icon"></div>
+                  <div class="t_count_title">Sword of Ares : 슬롯 캐시 드롭 종료까지</div>
+                  <div class="t_count_box"><img src="../images/gds_icon2_1gds_icon2.png" loading="lazy" alt="" class="t_count_img">
+                    <div class="t_count_txtbox">
+                      <div>01일</div>
+                      <div>:</div>
+                      <div>01시</div>
+                      <div>:</div>
+                      <div>01분</div>
+                      <div>:</div>
+                      <div>01초</div>
+                    </div>
+                  </div>
+                </div><img src="../images/gds_box2.png" loading="lazy" alt="" class="t_count_back">
+              </div>
+              <div class="t_count_frame">
+                <div class="t_count_block">
+                  <div class="t_count_iconbox"><img src="../images/gds_icon1_1gds_icon1.png" loading="lazy" alt="" class="t_count_icon"></div>
+                  <div class="t_count_title">Sword of Ares : 주간 토너먼트 종료까지</div>
+                  <div class="t_count_box"><img src="../images/gds_icon2_1gds_icon2.png" loading="lazy" alt="" class="t_count_img">
+                    <div class="t_count_txtbox">
+                      <div>011일</div>
+                      <div>:</div>
+                      <div>01시</div>
+                      <div>:</div>
+                      <div>01분</div>
+                      <div>:</div>
+                      <div>01초</div>
+                    </div>
+                  </div>
+                </div><img src="../images/gds_box2.png" loading="lazy" alt="" class="t_count_back">
+              </div>
+            </div>
+            <div class="pop_t_box2">
+              <div class="t_listwarp my">
+                <div class="my_score"> 내 점수 : 982,918</div>
+                <div>내랭크 : 4000 +</div>
+              </div>
+              <div class="t_list_top">
+                <div class="t_list _1 t3">포지션</div>
+                <div class="t_list _2">상금</div>
+              </div>
+              <div class="t_list_area">
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div class="yellow">1</div>
+                  </div>
+                  <div class="t_list _2 t3">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div class="yellow">2</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div class="yellow">3</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+                <div class="t_listwarp">
+                  <div class="t_list _1 t3">
+                    <div>4</div>
+                  </div>
+                  <div class="t_list _2">2,000,000,000.000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe rule">
+      <div class="pop"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e6371afe72a587eff1e_rule_box1.png" loading="lazy" alt="" class="pop1_back">
+        <div class="pop_box">
+          <div class="pop_title">게임규칙</div>
+          <div class="exsit_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e63c1cc259c7f364d9b_rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+          <div class="pop_block_r1">
+            <div class="pop_sub_title">모든 심볼은 가장 왼쪽의 인접한 릴에서 시작하여 왼쪽에서 오른쪽으로 지불합니다.</div>
+            <div class="pop_r_item">
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e20385b05250a99ac90_piace10.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br>2- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1f726dee531df96b55_piace05.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1fc2a607e23b208483_piace08.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="../images/rule_icon4_1rule_icon4.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="../images/bn_icon2.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1e71afe75ea07ef790_piace01.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1e3e8c0e216f99d8a1_piace06.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1ecc27e959ecff0d10_piace02.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1e23b53002b78cfff3_piace04.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box"><img src="../images/piace07.png" loading="lazy" alt="" class="r_img">
+                <div>5- \200.00<br>4- \200.00<br>3- \200.00<br></div>
+              </div>
+              <div class="r_box2"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1fb64bc73a30328c06_piace14.png" loading="lazy" alt="" class="r_img2">
+                <div class="text-block-22">WILD 심벌무료<br>스핀라운드중 모든 릴에 출몰합니다.<br>SCATTER를 제외한 모든 심벌을 대체합니다.<br></div>
+              </div>
+              <div class="r_box2 _2"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1f5b854c7013597c73_piace15.png" loading="lazy" alt="" class="r_img2">
+                <div class="text-block-23">SCATTER 심벌<br>모든 릴에 나타납니다.<br></div>
+              </div>
+            </div>
+          </div>
+          <div class="pop_block_r2">
+            <div class="popitle">머니심벌</div>
+            <div class="r_box3"><img src="../images/scm_icon2.png" loading="lazy" alt="" class="r_img3">
+              <div>이것은 머니 심벌입니다.<br>매 스핀마다 머니 심벌은 랜덤한 금전 가치를 지닙니다.<br>물고기 당첨 심벌 역시 머니 심벌입니다. <br>매 스핀마다 물고기는 랜덤한 금전 가치를 지니며, 무료 스핀 기능 중 획득 가능합니다.</div>
+            </div>
+            <div class="popitle">무료스핀</div>
+            <div>SCATTER 심벌을 3개 이상 히ㅡ하면 무료 스핀 기능이 발동됩니다.<br><br>5X SCATTER는 무료 스핀 20개를 드립니다.<br>4X SCATTER는 무료 스핀 15개를 드립니다.<br>3X SCATTER는 무료 스핀 10개를 드립니다.<br><br>무료 스핀 기능 동안 각 WILD 심벌은 화면의 머니 심벌에서 모든 값을 수집합니다.<br>기능 중 히트한 WILD 심벌 모두는 라운드 종료까지 수집됩니다.<br>4번째 WILD 심벌이 수집될 때 마다 이 기능이 다시 발동되고, 무료 스핀을 추가로 10개 드립니다.<br> 머니 심벌 수집 시 멀티플라이어는 첫번째 재발동에서 2X로, 두 번째 재발동에서 3X로, 세 번째 재발동에서 10X가 됩니다.<br>재발동된 스핀은 이전의 무료 스핀이 모두 끝난 후에 플레이됩니다.<br>멀티 플라이어는 재발동된 스핀에 적용됩니다.세 번째 재발동 후에는 기능을 더 이상 다시 발동할 수 없습니다.<br>화면에 WILD 심벌이 1개만 있는 경우 무작위로 무료 스핀이 끝날 때 물고기 심벌이 랜덤한 위치에 나타날 수 있습니다.<br>기능 도중 특별 릴이 플레이됩니다.<br>최대 상금은 배팅액의 2,100X배로 제한됩니다. <br>무료 스핀 라운드의 총 상금이 2,100X에 도달하면 라운드가 즉시 종료되고 상금이 지급되며, 나머지 무료 스핀은 모두 몰수됩니다.</div>
+          </div>
+          <div class="pop_block_r3">
+            <div class="popitle">휘발성</div>
+            <div>★★★★☆<br>‍<br>변동이 높은 게임은 평균적으로 지불 횟수가 적지만 단시간에 고액을 상금으로 받을 수 있습니다.</div>
+            <div class="popitle">무료스핀</div>
+            <div>모든 심벌은 선택된 페이라인에서 왼쪽에서 오른쪽으로 지급합니다.<br>모든승리는 라인당 배팅으로 곱해집니다.<br>‍<br>모든 값이 동전에 있는 실제 배당금으로 표시됩니다.유일하게 최고의 배당금은 각 라인 당 지급됩니다.<br>여러 지급 라인에서 우승한 경우, 모든 우승은 총 우승에 추가됩니다.</div>
+            <div class="r_item2"><img src="../images/slot_infoicon1.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5b6-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon1-p-500.png 500w, ../images/slot_infoicon1-p-800.png 800w, ../images/slot_infoicon1-p-1080.png 1080w, ../images/slot_infoicon1-p-2000.png 2000w, ../images/slot_infoicon1.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon2.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5b7-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon2-p-500.png 500w, ../images/slot_infoicon2-p-800.png 800w, ../images/slot_infoicon2-p-1080.png 1080w, ../images/slot_infoicon2-p-2000.png 2000w, ../images/slot_infoicon2.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon3.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5b8-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon3-p-500.png 500w, ../images/slot_infoicon3-p-800.png 800w, ../images/slot_infoicon3-p-1080.png 1080w, ../images/slot_infoicon3-p-2000.png 2000w, ../images/slot_infoicon3.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon4.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5b9-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon4-p-500.png 500w, ../images/slot_infoicon4-p-800.png 800w, ../images/slot_infoicon4-p-1080.png 1080w, ../images/slot_infoicon4-p-2000.png 2000w, ../images/slot_infoicon4.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon5.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5ba-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon5-p-500.png 500w, ../images/slot_infoicon5-p-800.png 800w, ../images/slot_infoicon5-p-1080.png 1080w, ../images/slot_infoicon5-p-2000.png 2000w, ../images/slot_infoicon5.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon6.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5bb-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon6-p-500.png 500w, ../images/slot_infoicon6-p-800.png 800w, ../images/slot_infoicon6-p-1080.png 1080w, ../images/slot_infoicon6-p-2000.png 2000w, ../images/slot_infoicon6.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon7.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5bc-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon7-p-500.png 500w, ../images/slot_infoicon7-p-800.png 800w, ../images/slot_infoicon7-p-1080.png 1080w, ../images/slot_infoicon7-p-2000.png 2000w, ../images/slot_infoicon7.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon8.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5bd-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon8-p-500.png 500w, ../images/slot_infoicon8-p-800.png 800w, ../images/slot_infoicon8-p-2000.png 2000w, ../images/slot_infoicon8.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon9.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5be-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon9-p-500.png 500w, ../images/slot_infoicon9-p-800.png 800w, ../images/slot_infoicon9-p-1080.png 1080w, ../images/slot_infoicon9-p-2000.png 2000w, ../images/slot_infoicon9.png 2000w" alt="" class="r_item_img"><img src="../images/slot_infoicon10.png" loading="lazy" id="w-node-_4496216e-2b5c-8b5c-2ba9-ff1d91abd5bf-fa6610e4" sizes="100vw" srcset="../images/slot_infoicon10-p-500.png 500w, ../images/slot_infoicon10-p-800.png 800w, ../images/slot_infoicon10-p-2000.png 2000w, ../images/slot_infoicon10.png 2000w" alt="" class="r_item_img"></div>
+            <div>키보드의 스페이스로 스핀을 시작하고 엔터로 스핀을 종료할 수 있습니다.<br><br>게임의 이론적 RTP는 96.71%<br>‍<br>기능불량은 모든 지불 및 케임을 무효케 합니다.최소베팅: \0.10최대베팅:\250.00</div>
+          </div>
+          <div class="pop_block_r4">
+            <div class="popitle">게임방법</div>
+            <div class="r_box3"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e985fb6d172e358fa20_st_icon4.png" loading="lazy" alt="" class="r_icon"><img src="../images/bett_icon4_1bett_icon4.png" loading="lazy" alt="" class="r_icon">
+              <div>버튼을 클릭하여 베팅 값을 변경하고 베팅 메뉴를 엽니다.<br>게임에서 사용할 베팅을 설정하십시오.</div>
+            </div>
+            <div class="popitle">메인 게임 인터페이스</div>
+            <div class="r_box3"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1371afe7f4977ef580_slot_bt3.png" loading="lazy" alt="" class="r_icon">
+              <div>게임 실행방식에 영향을 주는 설정이 포함된 SETTINGS 메뉴를 엽니다.</div>
+            </div>
+            <div class="r_box3"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e135b854c7d79597bbd_slot_bt4.png" loading="lazy" alt="" class="r_icon">
+              <div>정보 페이지를 엽니다.</div>
+            </div>
+            <div>크레디트 카드 및 베팅 레이블은 현대 잔액 및 현재 총 베팅을 표시합니다.<br>레이블을 클릭하면 코인과 현금 보기를 전환할 수 있습니다.</div>
+            <div class="r_box3"><img src="../images/bett_icon4_1bett_icon4.png" loading="lazy" alt="" class="r_icon"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e985fb6d172e358fa20_st_icon4.png" loading="lazy" alt="" class="r_icon">
+              <div>은 현재 베팅액을 올리거나 내리며 베팅 메뉴를 열고, <br>베팅 메뉴에서는 베팅 디노미네이션을 변경할 수 있습니다.</div>
+            </div>
+            <div class="r_box3"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1336447359f5e40a84_slot_bt.png" loading="lazy" alt="" class="r_icon2">
+              <div>게임을 시작합니다.</div>
+            </div>
+            <div class="r_box3"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e983644730619e41109_st_icon2.png" loading="lazy" alt="" class="r_icon"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e98a2f3a230210c7f8f_st_icon3.png" loading="lazy" alt="" class="r_icon">
+              <div>자동 플레이 메뉴를 엽니다.</div>
+            </div>
+          </div>
+          <div class="pop_block_r5">
+            <div class="popitle">설정메뉴</div>
+            <div>빠른스핀- 이 설정을 선택하면 게임 릴이 자동으로 시작되고 해제되는 즉시 중지됩니다.<br>‍<br>인트로 화면 - 소개 화면을 켜거나 끕니다.엠비언트 - 주변 소리와 게임음악을 키거나 끕니다.<br>‍<br>사운드 FX - 게임의 사운드 효과를 켜거나 끕니다.<br>‍<br>게임 이력 - 게임 기록 페이지를 엽니다.</div>
+            <div class="popitle">정보화면</div>
+            <div class="r_box3"><img src="../images/rule_icon11_1rule_icon11.png" loading="lazy" alt="" class="r_icon"><img src="../images/rule_icon13_1rule_icon13.png" loading="lazy" alt="" class="r_icon">
+              <div>로 정보페이지를 스크롤합니다.</div>
+            </div>
+            <div class="r_box3"><img src="../images/rule_icon12_1rule_icon12.png" loading="lazy" alt="" class="r_icon">
+              <div>로 정보 화면을 닫습니다.</div>
+            </div>
+            <div>베팅 메뉴는 게임에서 사용할 수 있는 라인 수, 현재 총 베팅을 코인과 현금으로 표시합니다.</div>
+            <div class="r_box3">
+              <div>- 라인에 베팅 팝업의 </div><img src="../images/bett_icon2_1bett_icon2.png" loading="lazy" alt="" class="r_icon"><img src="../images/st_icon5_1st_icon5.png" loading="lazy" alt="" class="r_icon">
+              <div>버튼으로 라인당 코인과 코인값 입력 필드의 값을 조정하십시오.</div>
+            </div>
+            <div class="r_pop_warn">최대 당첨금은 베팅의 2100X배 입니다. <br>만약 한 라운드의 총 당첨금이 베팅의 2100X배에 도달하면 해당 라운드는 즉시 종료되며,<br> 당첨금은 제한액에 따라 지급되면 남아있는 기능은 모두 몰수됩니다.</div>
+          </div>
+          <div class="pop_block_r6">
+            <div class="popitle">오토플레이</div>
+            <div>버튼을 클릭하면 자동 플레이를 시작할 수 있는 자동 스핀 수를 보여줍니다.<br>화면 스킵 옵션은 일정 시간 후 기능 소개 및 화면종료를 자동으로 건너뜁니다.</div>
+          </div>
+          <div class="pop_b_btn">
+            <div class="text-block-24">페이지 1/6</div>
+            <div class="btn_warp">
+              <div class="btnbox"><img src="../images/rule_icon11_1rule_icon11.png" loading="lazy" alt="" class="btn-2"></div>
+              <div class="btnbox"><img src="../images/rule_icon12_1rule_icon12.png" loading="lazy" alt="" class="btn-2"></div>
+              <div class="btnbox"><img src="../images/rule_icon13_1rule_icon13.png" loading="lazy" alt="" class="btn-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe option">
+      <div class="pop"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e6371afe72a587eff1e_rule_box1.png" loading="lazy" alt="" class="pop1_back">
+        <div class="pop_box">
+          <div class="pop_title">시스템 설정</div>
+          <div class="text-block-25">게임을 쾌적하게 즐기기 위한 옵션을 설정하실 수 있습니다.</div>
+          <div class="pop_block">
+            <div class="op_block1">
+              <div class="op_warp1">
+                <div class="outline_box">
+                  <div class="op_title">게임이력</div>
+                  <div class="op_title outline">게임이력</div>
+                </div>
+                <div class="g_btn"><img src="../images/st_icon6_1st_icon6.png" loading="lazy" alt="" class="op_icon"></div>
+              </div>
+              <div class="op_container">
+                <div class="outline_box">
+                  <div class="op_title">배팅총액</div>
+                  <div class="op_title outline">배팅총액</div>
+                </div>
+                <div class="op_warp2">
+                  <div class="op_pm_btnwarp"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e131279b32d57095544_slot_bt2.png" loading="lazy" alt="" class="op_pm_btn"></div>
+                  <div class="op_inpit"><img src="../images/st_box2.png" loading="lazy" alt="" class="op_txt_input_back">
+                    <div class="op_input_txt">\ 999,999,999,999</div>
+                  </div>
+                  <div class="op_pm_btnwarp"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e985fb6d172e358fa20_st_icon4.png" loading="lazy" alt="" class="op_pm_btn"></div>
+                </div>
+              </div>
+              <div class="op_warp1">
+                <div class="outline_box">
+                  <div class="op_title">정품 인증 게임 확인</div>
+                  <div class="op_title outline">정품 인증 게임 확인</div>
+                </div>
+                <div class="g_btn"><img src="../images/st_icon7_1st_icon7.png" loading="lazy" alt="" class="op_icon"></div>
+              </div>
+            </div>
+            <div class="op_block2">
+              <div class="op_warp2">
+                <div class="op_box">
+                  <div class="outline_box">
+                    <div class="op_title">빠른 스핀</div>
+                    <div class="op_title outline">빠른 스핀</div>
+                  </div>
+                  <div>더 빠른 플레이 (총 스핀 시간 감소)</div>
+                </div>
+                <div class="op_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e983644730619e41109_st_icon2.png" loading="lazy" alt="" class="op_btn_img on"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e98a2f3a230210c7f8f_st_icon3.png" loading="lazy" alt="" class="op_btn_img off"></div>
+              </div>
+              <div class="op_warp2">
+                <div class="op_box">
+                  <div class="outline_box">
+                    <div class="op_title">게임 배경음악</div>
+                    <div class="op_title outline">게임 배경음악</div>
+                  </div>
+                  <div>게임 음악 ON/OFF</div>
+                </div>
+                <div class="op_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e983644730619e41109_st_icon2.png" loading="lazy" alt="" class="op_btn_img on"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e98a2f3a230210c7f8f_st_icon3.png" loading="lazy" alt="" class="op_btn_img off"></div>
+              </div>
+              <div class="op_warp2">
+                <div class="op_box">
+                  <div class="outline_box">
+                    <div class="op_title">게임 효과음</div>
+                    <div class="op_title outline">게임 효과음</div>
+                  </div>
+                  <div>게임 효과음 ON/OFF</div>
+                </div>
+                <div class="op_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e983644730619e41109_st_icon2.png" loading="lazy" alt="" class="op_btn_img on"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e98a2f3a230210c7f8f_st_icon3.png" loading="lazy" alt="" class="op_btn_img off"></div>
+              </div>
+              <div class="op_warp2">
+                <div class="op_box">
+                  <div class="outline_box">
+                    <div class="op_title">인트로 화면</div>
+                    <div class="op_title outline">인트로 화면</div>
+                  </div>
+                  <div>게임 시작 전 인트로 화면 보기</div>
+                </div>
+                <div class="op_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e983644730619e41109_st_icon2.png" loading="lazy" alt="" class="op_btn_img on"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e98a2f3a230210c7f8f_st_icon3.png" loading="lazy" alt="" class="op_btn_img off"></div>
+              </div>
+            </div>
+          </div>
+          <div class="exsit_btn"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e63c1cc259c7f364d9b_rule_icon14.png" loading="lazy" alt="" class="exsit_btn_img"></div>
+        </div>
+      </div>
+    </div>
+    <div class="popframe scatter">
+      <div class="pop"><img src="../images/bn_box.png" loading="lazy" sizes="100vw" srcset="../images/bn_box-p-500.png 500w, ../images/bn_box-p-800.png 800w, ../images/bn_box-p-1080.png 1080w, ../images/bn_box.png 1194w" alt="" class="scatter_back">
+        <div class="pop_box"><img src="../images/bn_titlefont.png" loading="lazy" alt="" class="scatter_title_img">
+          <div class="scatter_block">
+            <div class="outline_box">
+              <div class="scatter_txt"><span class="yellow">무료 스핀 : 10개</span></div>
+              <div class="scatter_txt outline">무료 스핀 : 10개</div>
+            </div>
+            <div class="scatter_warp1"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e1fb64bc73a30328c06_piace14.png" loading="lazy" alt="" class="scatter_img">
+              <div class="outline_box">
+                <div class="scatter_txt">가 잡는</div>
+                <div class="scatter_txt outline">가 잡는</div>
+              </div><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63904e3d97156ee3ebee85b9_bn_icon2.png" loading="lazy" alt="" class="scatter_img">
+            </div>
+          </div>
+          <div class="scatter_warp2">
+            <div class="scatter_img2_box"><img src="../images/bn_icon6_1bn_icon6.png" loading="lazy" alt="" class="scatter_img2">
+              <div class="scatter_img2_txt">2</div>
+              <div class="scatter_img2_txt outline">2</div>
+            </div>
+            <div class="scatter_img2_box"><img src="../images/bn_icon5_1bn_icon5.png" loading="lazy" alt="" class="scatter_img2">
+              <div class="scatter_img2_txt up">2</div>
+              <div class="scatter_img2_txt up outline">2</div>
+            </div>
+            <div class="scatter_img2_box"><img src="../images/bn_icon4_1bn_icon4.png" loading="lazy" alt="" class="scatter_img2"></div>
+            <div class="scatter_img2_box"><img src="../images/bn_icon3_1bn_icon3.png" loading="lazy" alt="" class="scatter_img2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scatter_click">
+        <div class="click_txt outline">아무 곳이나 클릭하여 계속하세요!</div>
+        <div class="click_txt">아무 곳이나 클릭하여 계속하세요!</div>
+      </div>
+    </div>
+    <div class="popframe congratulations">
+      <div class="pop congratulations"><img src="../images/win_box1.png" loading="lazy" sizes="100vw" srcset="../images/win_box1-p-500.png 500w, ../images/win_box1-p-800.png 800w, ../images/win_box1-p-1080.png 1080w, ../images/win_box1.png 1266w" alt="" class="c_back">
+        <div class="pop_box"><img src="../images/win_titlefont.png" loading="lazy" sizes="100vw" srcset="../images/win_titlefont-p-500.png 500w, ../images/win_titlefont-p-800.png 800w, ../images/win_titlefont.png 928w" alt="" class="c_title_img">
+          <div class="c_txtbox outline">
+            <div>당신의승리입니다!</div>
+            <div>\25,000.00</div>
+          </div>
+          <div class="c_txtbox">
+            <div class="text-block-26">당신의승리입니다!</div>
+            <div class="text-block-27">\25,000.00</div>
+          </div>
+        </div>
+      </div><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63905234c1cc250e9036964c_font_great_win.png" loading="lazy" alt="" class="win_img _2"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/63905234c9e535fdc80d875a_font_wonderful_win.png" loading="lazy" alt="" class="win_img _4"><img src="https://uploads-ssl.webflow.com/639049805e921f1c236e5329/639052343644733161e44f1c_font_awesome_win.png" loading="lazy" alt="" class="win_img _3">
+      <div class="win_txt2 _2">아무 곳이나 클릭하여 계속하세요</div>
+    </div>
+  </div>
+  <div class="footer _2">
+    <div class="f_logo w-embed">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg id="homelogo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 920.96 464.87">
+        <style type="text/css">
+		.s_logo{fill:currentColor;}
+	</style>
+        <g id="homelogo-2">
+          <g>
+            <path class="s_logo" d="M690.72,60.68c-24.81-.06-45.49,18.4-47.35,53.56-1.65,29.68,14.82,57.12,44.07,62.82,30.53,3.85,39.49-19.22,58.85-41.6,11.54-13.2,25.59-22.48,40.42-13.73,4.49,3.36,5.52,11.4,.29,16.41,2.81,5.04,10.59,9.21,19.32,1.79,10.83-10.03,8.6-26.99,.1-35.74-5.92-5.93-13.58-6.6-21.38-4.68-5.34,1.31-10.74,3.84-15.69,6.72-22.38,13.42-32.41,44.03-54.71,47.75-18.44,2.87-38.35-9.48-38.93-33.18l61.41-1.05c.16-1.01,.29-2,.4-3,3.54-30.35-11.58-50.17-36.72-55.06-3.41-.66-6.77-.99-10.07-.99h0Zm.51,9.08c.38-.02,.76,0,1.15,.03,13.66,1.14,17.62,17.34,16.06,40.59l-32.54,.65c-1.74-22.9,3.66-40.99,15.33-41.27h0Z"></path>
+            <path class="s_logo" d="M255.87,162.41c-4.77,2.71-9.06,2.47-10.9-.74-1.64-3.21-1.85-13.1-2.18-21.74,0,0,0-9.88-.3-34.83-.48-31.12-12.12-44.21-43.48-44.21-11.17,0-28.62,3.95-34.89,20-3.6,8.65-2.11,15.56,2.67,18.78,5.17,3.21,13.27,2.47,19.02-8.15-6.87-7.9,.32-23.23,12.55-21.98,9.8,0,12.04,13.09,12.57,25.69,.49,17.04-10.4,12.1-29.28,16.79-23.71,5.92-32.61,22.73-31.64,40.76,.97,18.03,15.6,24.7,31.87,24.7,9.8,0,21.07-2.97,29.24-16.31,1.77,11.87,13.69,16.31,24.27,16.31s17.48-4.44,21.52-9.63c-.34-2.47-.52-2.72-1.03-5.44h0Zm-58.58-.24c-7.5,2.47-15.63-4.45-15.89-15.81-.14-12.61,6.64-21.74,15.39-24.95,10.33-3.46,12.61-4.69,14.56-8.64,.18,6.18,.06,15.31-.23,24.21-.57,11.86-4.17,22.47-13.84,25.2h0Z"></path>
+            <path class="s_logo" d="M493.19,4.64c-11.95,13.34-31.75,19.27-43.32,19.27v6.92c15.1,0,16.85,12.84,16.85,28.41v118.32c10.64-.08,24.32-6.91,29.4-16.29,5.49,9.13,13.52,16.55,24.88,18.52,29.79,5.44,49.19-23.47,49.19-58.3s-21.16-63.49-50.95-58.29c-8.63,1.48-15.68,6.42-20.78,12.84V12.23c0-3.89-2.27-7.08-5.24-7.59h-.05Zm26.34,68.44c12.11,.23,18.72,19.13,18.64,48.33-.11,29.43-6.85,48.31-19,48.32-12.12-.23-18.91-19.17-18.83-48.37,.12-29.43,7.04-48.27,19.19-48.28h0Z"></path>
+            <path class="s_logo" d="M615.04,4.56c-11.95,13.34-31.94,19.27-43.31,19.27v6.92c14.89,0,16.86,12.84,16.86,28.41v83.25c0,15.56-1.97,28.41-16.86,28.41v6.66h65.46v-6.66c-15.1,0-16.85-12.84-16.85-28.41V12.15c0-3.89-2.28-7.08-5.25-7.59h-.05Z"></path>
+            <path class="s_logo" d="M304.25,62.85c-11.95,13.34-31.95,19.27-43.31,19.27v6.92c.93,0,1.81,.05,2.64,.15,.82,.09,1.59,.24,2.33,.43h.05c.72,.18,1.39,.42,2.02,.68,0,0,.04,0,.06,.05,.63,.28,1.23,.59,1.77,.94,0,0,.04,0,.05,.05,.55,.35,1.06,.73,1.54,1.16,.04,0,.05,.05,.06,.06,.46,.42,.89,.86,1.28,1.34,.04,.05,.05,.05,.07,.08,.39,.48,.74,.98,1.07,1.51,.04,.06,.07,.12,.11,.18,.31,.52,.6,1.08,.87,1.65,.04,.07,.06,.15,.09,.21,.26,.57,.49,1.16,.7,1.78,.04,.08,.06,.16,.08,.24,.2,.6,.38,1.22,.54,1.85,.05,.19,.1,.39,.14,.58,.13,.54,.24,1.1,.35,1.66,.04,.2,.08,.41,.11,.62,.1,.55,.18,1.12,.25,1.69,.04,.23,.06,.46,.09,.68,.4,3.34,.52,6.99,.52,10.8v24.95c0,15.56-1.96,28.41-16.86,28.41v6.67h62.91v-6.67c-14.89,0-14.5-12.84-14.5-28.41v-29.89c0-.47,.04-.93,.04-1.39l.17-3.89c.98-13.76,6.01-24.11,16.46-24.11,13.53,0,16.66,13.09,16.66,27.67v31.62c0,15.56,.4,28.41-14.5,28.41v6.67h63.11v-6.67c-15.09,0-16.86-12.84-16.86-28.41v-32.52c.75-15.06,7.9-26.76,19.02-26.76,13.52,0,16.65,13.09,16.65,27.67v31.62c0,15.56,.39,28.41-14.5,28.41v6.67h63.11v-6.67c-15.09,0-16.85-12.84-16.85-28.41v-29.89c.05-10.5-.82-19.42-2.93-26.18-4.9-16.3-16.47-23.22-30.97-23.22-15.87,0-27.71,8.89-33.6,19.27l-2.4,5.5c-.15-.53-.3-1.05-.45-1.54-4.9-16.3-16.47-23.22-30.97-23.22-15.71,0-25.08,8.72-30.97,18.96v-11.71c-.04-3.84-2.3-6.99-5.24-7.49h-.04Z"></path>
+            <path class="s_logo" d="M60.36,1.39C22.68,8.42,0,43.78,0,88.79c0,50.65,31.16,88.68,76.04,88.68,22.54,0,48.41-14.33,51.35,0h4.12v-53.36c0-15.56,3.53-28.41,18.42-28.41v-6.67H80.75v6.67c14.9,0,18.23,12.84,18.23,28.41v13.58c0,31.62-17.25,30.88-22.93,30.63-23.32-1.23-39.98-28.65-39.98-79.54C35.26,40.12,56.34,1.56,95.83,10.72c30.02,8.26,19.14,49.55,2.3,34.92-17.01,17.6,6.59,48,26.31,26.61,12.21-14.76,11.9-35.3-.1-52.32-4.68-6.62-14.75-13.98-28.33-17.63-11.75-2.68-23.92-3.06-35.67-.9h0Z"></path>
+            <path class="s_logo" d="M898.12,217.37c-20.9,.06-34.05,17.51-48.56,40.89-7.21,11.85-12.46,22.65-16.77,32.28l.05-9.04,.04-7.73c-.04-3.84-2.3-6.98-5.24-7.49h-.05c-11.95,13.34-31.94,19.27-43.32,19.27v6.91c12.82,0,16.05,9.52,16.7,22.08,.11,2.04,.15,4.17,.15,6.34v24.95c0,15.56-1.96,28.41-16.85,28.41v6.67h64.67v-6.67c-15.09,0-16.26-12.85-16.26-28.41v-31.29l.05-9.97c11.61-27.45,42.9-75.94,61.35-59.88,3.32,3.41,3.92,9.45-.4,13.75,22.05,15.51,34.4-18.29,22.9-32.58-3.4-4.31-7.41-6.89-11.86-7.97-1.56-.24-3.06-.4-4.54-.48-.69-.03-1.37-.05-2.05-.05h0Z"></path>
+            <path class="s_logo" d="M511.13,376.24c-4.77,2.71-9.06,2.47-10.9-.74-1.64-3.21-1.85-13.1-2.18-21.74,0,0,0-9.88-.3-34.83-.48-31.12-12.12-44.21-43.48-44.21-11.17,0-28.62,3.95-34.89,20-3.6,8.65-2.11,15.56,2.67,18.78,5.17,3.21,13.27,2.47,19.02-8.15-6.87-7.9,.32-23.23,12.55-21.98,9.8,0,12.04,13.09,12.57,25.69,.49,17.04-10.4,12.1-29.28,16.79-23.71,5.92-32.61,22.73-31.64,40.76,.97,18.03,15.6,24.7,31.87,24.7,9.8,0,21.07-2.97,29.24-16.31,1.77,11.87,13.69,16.31,24.27,16.31s17.48-4.44,21.52-9.63c-.34-2.47-.52-2.72-1.03-5.44h0Zm-58.58-.24c-7.5,2.47-15.63-4.45-15.89-15.81-.14-12.61,6.64-21.74,15.39-24.95,10.33-3.46,12.61-4.69,14.56-8.64,.18,6.18,.06,15.31-.23,24.21-.57,11.86-4.17,22.47-13.84,25.2h0Z"></path>
+            <path class="s_logo" d="M728.53,274.12c-24.81-.05-45.49,18.4-47.34,53.56-1.65,29.68,14.82,57.13,44.06,62.82,23.83,4.64,40.07-11.44,48.71-28.51,.04-.24-2.88-4.06-2.88-4.06-19.88,19.88-56.79,8.69-57.58-23.7l61.41-1.05c.16-1.01,.29-2,.4-2.99,3.54-30.35-11.58-50.18-36.72-55.06-3.41-.67-6.77-1-10.07-1.01h0Zm.51,9.08c.38,0,.77,0,1.15,.05,13.65,1.14,17.62,17.35,16.06,40.6l-32.53,.65c-1.75-22.91,3.65-40.99,15.32-41.28v-.02Z"></path>
+            <path class="s_logo" d="M645.61,235.47c-4.13,26.66-21.56,40.47-40.96,41.71v9.63h15.28v64.97c0,26.43,12.74,39.52,28.42,39.52,14.5,0,22.14-11.86,27.24-27.17l-3.72-2.48c-2.93,6.18-7.05,9.14-12.15,8.16-4.71-1.24-8.04-4.45-8.04-16.06v-66.94h20.77v-9.63h-20.77v-34.06c0-4.25-2.71-7.66-6.08-7.66h0Z"></path>
+            <path class="s_logo" d="M560.75,273.51c-7.1,.28-14.03,.95-20.42,4.33-7.5,3.99-13.11,11.39-14.31,23.58-2.15,23.71,15.48,34.58,28.42,42.98,13.72,8.89,22.54,12.84,21.17,25.69-.79,7.9-9.21,12.84-19.8,12.1-7.84-.74-11.75-3.71-12.92-10.37-1.18-7.41,2.75-12.6,8.43-12.11-.2-9.88-4.31-19.02-14.31-20.74-11.95-2.23-20.97,11.61-18.03,26.68,3.14,16.31,19.97,24.46,36.24,25.44,19.99,1.48,44.88-4.45,48.8-28.65,4.51-27.66-16.46-37.05-30.18-46.68-12.61-8.76-20.95-13.22-21.23-21.58l-.08-.02c-1.35-10.54,6.77-16.37,16.02-13.01,7.72,2.92,10.33,12.09-.52,21.11,6.9,9.46,15.01,8.72,19.76,4.59,4.36-4.04,5.02-11.15,.47-19.06-6.04-11.05-17.51-14.23-27.53-14.27h0Z"></path>
+            <path class="s_logo" d="M227.71,227.77v6.92c14.9,0,17.25,12.84,17.25,28.41v102.51c0,21-2.35,28.42-17.25,28.42v6.66h44.69v-6.66c-14.9,0-19.59-7.42-19.59-28.42v-108.44l47.82,114.37h7.84l49.39-121.04v140.9c.33,7.18,.86,16.71,2.27,24.02,3.34,26.96,23.71,49.46,49.23,49.46,13.33,0,31.95-7.9,33.32-26.34,.97-13.83-6.67-21.73-16.66-21.29-10.19,.44-14.51,9.88-14.51,16.24,6.08,.66,9.22,4.61,8.83,12.5-.4,7.47-5.09,10.98-10.98,10.98-14.23-2.33-17.52-20.73-18.14-31.75v-55.82c0-.06,0-.11,.04-.15-.04-1.21-.07-2.4-.07-3.65v-102.51c0-15.56,3.33-28.41,18.42-28.41v-6.92h-51.74l-39.98,98.56-39.58-98.56h-50.57Z"></path>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="language">
+      <div class="lang-icon w-embed">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg id="lang" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 129.75 129.75">
+          <defs>
+            <style type="text/css">
+		.lang_img{fill:currentColor;}
+		</style>
+          </defs>
+          <g id="lang-2">
+            <g>
+              <path class="lang_img" d="M64.87,0C29.1,0,0,29.1,0,64.87s29.1,64.87,64.87,64.87,64.87-29.1,64.87-64.87S100.65,0,64.87,0Zm58.14,75.23c-.23,0-.51-.06-.89-.2-2.64-.99-5.91-4.99-5.04-8.47,1.29-5.16-1.67-8.07-4.05-10.41-2.49-2.45-4.45-4.38-3.65-9.19,1.29-7.77,5.42-10.31,6.97-11,4.82,8.55,7.59,18.42,7.59,28.92,0,3.53-.33,6.99-.93,10.35ZM64.87,5.81c3.25,0,6.43,.27,9.53,.78-.6,2.81-.28,6.54,.11,10.88,.35,3.92,.75,8.36,.13,10.87-1.82,7.27-13.31,7.48-14.61,7.48-7.33,0-10.68,2.68-14.3,11.48-2.26,5.49-7.53,7.94-11.59,7.5-4.16-.44-7.09-3.66-8.04-8.85-1.62-8.83-6.49-12.7-9.97-14.38C26.78,16.03,44.65,5.81,64.87,5.81Zm0,118.13c-32.57,0-59.06-26.5-59.06-59.06,0-10.26,2.63-19.91,7.25-28.32,2.16,.89,6.03,3.44,7.32,10.45,1.43,7.79,6.35,12.87,13.15,13.58,.54,.06,1.08,.09,1.62,.09,6.76,0,13.16-4.4,15.95-11.15,3.13-7.58,4.89-7.89,8.93-7.89,7.97,0,18.05-3.11,20.25-11.88,.87-3.47,.44-8.21,.02-12.8-.25-2.82-.66-7.28-.25-9.16,13.61,3.62,25.3,12,33.19,23.24-2.98,1.57-8.02,5.55-9.59,14.97-1.3,7.79,2.52,11.55,5.31,14.29,2.37,2.33,2.92,3.11,2.48,4.85-1.62,6.5,3.24,13.29,8.63,15.32,.56,.21,1.1,.35,1.64,.45-7.01,24.8-29.82,43.03-56.84,43.03Z"></path>
+              <path class="lang_img" d="M61.94,61.85c-7.49,2.11-9.43,7.25-11.13,11.78-1.44,3.82-2.8,7.44-7.48,10.17-1.75,.13-5.56,.8-7.23,4.02-1.55,3.01-.63,6.76,2.81,11.48,6.07,8.32,10.55,8.03,15.37,6.87,1.61-.39,3-.72,4.6-.38,.99,.21,2.06,.51,3.2,.83,2.73,.77,6.22,1.75,9.88,1.75,5.14,0,10.61-1.93,14.76-9.12,5.87-10.16,5.62-21.06-.68-29.17-5.73-7.37-15.41-10.69-24.09-8.23Zm19.75,34.49c-4.5,7.79-10.32,6.85-18.04,4.69-1.26-.36-2.46-.69-3.55-.92-.9-.19-1.76-.27-2.56-.27-1.77,0-3.3,.37-4.61,.69-3.24,.78-5.03,1.22-9.31-4.65-2.37-3.25-2.57-4.95-2.34-5.39,.26-.5,1.77-.91,2.85-.91h.74l.66-.35c7.05-3.79,9.09-9.2,10.72-13.55,1.57-4.17,2.61-6.92,7.27-8.23,6.43-1.81,13.64,.68,17.93,6.21,4.87,6.26,4.95,14.54,.24,22.69Z"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <p class="p_text">언어선택</p>
+    </div>
+    <p class="copyright">copyright.카피라이트문구가 들어갑니다.</p>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=647576e9c152564955c533bf" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+  <style>
+/*main 높이*/
+.slotbox{
+	height:calc(100dvh - 230px);
+}
+@media screen and (max-width: 1368px){ /*반응형*/
+	.header{
+  	height:10dvh;
+  }
+  .footer._2{
+  	display:none;
+  }
+  .slotbox{
+    height:90dvh;
+  }
+}
+@media screen and (max-width: 1368px) and (min-width:960px){ /* 아이패드용*/
+  .slot_content{
+    min-width: 90%;
+  }
+  .frame_slot{
+	transform:scale(1);
+}
+.container-2{
+	width: 100%;
+}
+/* 상단 슬롯 로고(= let's Go) */
+.slots_logo {
+    height: 8vw;
+    top: -0.8%;
+}
+/* 상단 ui */
+.slot_top{
+	top:3%;
+}
+.slot_top_back{
+	width: 55vw;
+}
+.slot_top_warp{
+	width: 3.3vw;
+	margin:0 0.5vw;
+}
+.slot_top_img{
+	width: 3.3vw;
+}
+.slot_top_icon {
+    width: 8vw;
+    height: 8vw;
+    top: -2vh;
+    right: -1.5vw;
+}
+.slot_menu_area{
+	width: 10vw;
+	top:2%;
+}
+.slot_ui_btn{
+	width: 4vw;
+}
+/* 좌측 이벤트 ui */
+.slot_event_box{
+	width:14vw;
+	font-size: 1vw;
+	top:13%;
+}
+.slot_eventwarp{
+	font-size: 2vw;
+}
+.slot_event_img{
+	width: 4vw;
+}
+/* --- 메인 ui --- */
+.slots_block{
+	padding:0 2vw;
+  height:70%;
+}
+.item_box{
+	padding:0 0.3vw;
+}
+.slot_line{
+	width:5vw;
+}
+.slot_area{
+	width:12vw;
+}
+/* 상어 scatter */
+.slot_bn_back{
+	top:12%;
+	width:14vw;
+}
+.slot_b_img2{
+	top:12%;
+	width:14vw;
+}
+/* 물고기이미지 */
+.slot_img_b1{
+	border-radius: 12px;
+}
+.slot_img_b2{
+	border-radius:12px;
+}
+.slot_img2{
+	width:8vw;
+}
+.slot_img2._2{
+	width: 10vw;
+}
+.slot_img2._3{
+	width: 9vw;
+}
+.item_txtbox{
+	font-size: 1.5vw;
+	line-height: 4vw;
+}
+.item_txtbox.on{
+	font-size: 1.8vw;
+	line-height: 4vw;
+}
+/* slot item */
+.slot_img{
+	height:8vw;
+}
+.slot_img.bomb2{
+	height:8vw;
+  bottom:30%;
+}
+/* --- 하단 ui ---*/
+.slot_ui{
+	bottom:0;
+}
+/* i+스피커 */
+.slot_ui_btn_area {
+	bottom:2%;
+}
+.g_btnwarp{
+	margin:0.5vw 0;
+}
+/* i(도움말) 버튼 */
+.slot_info {
+	top:0%;
+}
+.slot_ui_btn {
+	width:5vw;
+}
+.slot_ui_sound,.slot_ui_btn2{
+	width:3vw;
+}
+/* 스피커 */
+.slot_auto_area {
+	bottom: 5%;
+    left: 8%;
+}
+.slot_auto_img {
+    width: 5vw;
+}
+/* -/머신/+ 버튼 */
+.slots_btnwarp{
+	width: 10vw;
+    height: 10vw;
+    top: 1.7vw;
+    right: 8.3vw;
+}
+.slots_btn{
+	width: 10vw;
+	height: 10vw;
+}
+.slots_btn_betwarp{
+	width: 6vw;
+	height: 6vw;
+	bottom: 0.5vw;
+	right:1vw;
+}
+.slots_btn_betwarp._2 {
+    right: 19.5vw;
+}
+.slots_btn_bet{
+	height:6vw
+}
+/* 오토플레이 버튼 */
+.slots_auto_btn{
+	width: 7vw;
+	top:25%;
+}
+.slot_auto_txt{
+	font-size: 1vw;
+	transform:scale(0.9);
+}
+/* 자원 ui */
+.slot_ui_assetbox{
+	width:20vw;
+	left:13%;
+	bottom:0%;
+	transform:scale(0.8);
+	height: 7vw;
+}
+/* 설명문 */
+.ui_txtbox {
+    width: 31vw;
+    height: 2vw;
+    bottom: 30%;
+    left: 35%;
+}
+.ui_txt {
+    font-size: 1.5vw;
+    line-height: 1.8vw;
+}
+.ui_win_area {
+    width: 33vw;
+    height: 3vw;
+    bottom: 5%;
+    left: 35%;
+}
+.ui_win_txt{
+	font-size: 1.5vw;
+    line-height: 1.6vw;
+}
+.ui_win_img{
+	height:2.5vw;
+}
+/*slide*/
+.w-slider-nav{
+	padding:0;
+  height:20px;
+}
+/*footer*/
+.language:hover{
+	color:#fff;
+}
+.language:hover .lang-icon{
+	color:#fff;
+}
+.m_btn:hover .line{
+	width:100%;
+  transition:0.5s;
+}
+.item_txt.outline{-webkit-text-stroke: 5px black;}
+.ui_winnings.outline{-webkit-text-stroke: 5px black;}
+.win_txt.outline{-webkit-text-stroke: 10px black;}
+.click_txt.outline{-webkit-text-stroke: 8px black;}
+.scatter_txt.outline{-webkit-text-stroke: 8px black;}
+.scatter_img2_txt.up.outline{-webkit-text-stroke: 4px black;}
+.scatter_img2_txt.outline{-webkit-text-stroke: 4px black;}
+.op_title.outline{-webkit-text-stroke: 5px black;}
+.c_txtbox.outline{-webkit-text-stroke: 8px black;}
+  /* popup*/
+  .pop{
+    transform:scale(0.8);
+  }
+}
+@media screen and (min-width:968px) and (max-width:1100px){ /*ipad mini*/
+	  .r_img{
+    height:70px;
+  }
+  .r_img2{
+    height: 100px;
+  }
+  .pop_r_item{
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+</style>
+<script src="../js/common.js"></script>
+</body>
+</html>
